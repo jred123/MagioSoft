@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', 'DE PROFESIONALES')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE PROFESIONALES')
+@section('contentlist')
 
 {!! Form::open(['route'=>['subarea.profesional', $s],'method'=>'GET','class' => 'navbar-form navbar-left pull-right']) !!}
 

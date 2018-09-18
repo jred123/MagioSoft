@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'ACTUALIZAR')
-@section('titulo2', 'INFORMACION DE LA CARRERA')
-@section('content')
+@extends('menu.menuedit')
+@section('titulo1edit', 'ACTUALIZAR')
+@section('titulo2edit', 'INFORMACION DE LA CARRERA')
+@section('contentedit')
 
 <div>
 

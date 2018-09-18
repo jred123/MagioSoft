@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'REGISTRO')
-@section('titulo2', 'DE ESTUDIANTES')
-@section('content')
+@extends('menu.menureg')
+@section('titulo1reg', 'REGISTRO')
+@section('titulo2reg', 'DE ESTUDIANTES')
+@section('contentreg')
 
 <div>
     {!! Form::open(['route'=>'estudiante.store','method'=>'POST test-form','data-parsley-validate'=>""]) !!}

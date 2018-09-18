@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', 'DE SUBAREAS')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE AUBAREAS')
+@section('contentlist')
 
 
 {!! Form::open(['route'=>['subarea.index','method'=>'GET']]) !!}

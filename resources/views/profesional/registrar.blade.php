@@ -1,8 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'REGISTRO')
-@section('titulo2', 'DE PROFESIONALES')
-@section('content')
-
+@extends('menu.menureg')
+@section('titulo1reg', 'REGISTRO')
+@section('titulo2reg', 'DE PROFESIONALES')
+@section('contentreg')
 <div>
 
     {!! Form::open(['route'=>'profesional.store','method'=>'POST','data-parsley-validate'=>""]) !!}

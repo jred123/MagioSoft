@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', 'DE CARRERAS')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE CARRERAS')
+@section('contentlist')
 <div class="table-responsive">
   <table class="table" id="table_id">
     <thead class="thead-light">
