@@ -1,6 +1,6 @@
 
 @extends('layouts.principal')
-@section('titulo1', 'Facultad Mayor De San Simon')
+@section('titulo1', 'Universidad Mayor De San Simon')
 @section('titulo2', 'Departamento de Informática y Sistemas.')
 @section('menu')
 <div class="row">
