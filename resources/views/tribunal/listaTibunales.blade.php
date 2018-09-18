@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', ' DE PROYECTOS DEL PROFESIONAL COMO TRIBUNAL')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE PROYECTOS DEL PROFESIONAL COMO TRIBUNAL')
+@section('contentlist')
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

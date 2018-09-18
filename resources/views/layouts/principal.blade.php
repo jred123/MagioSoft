@@ -1,120 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Asignacion de Tribunales</title>
-    <link rel="icon" href="{{ asset ('img/fav-icon.png')}}" type="image/x-icon" />
-    {!!Html::style('css/bootstrap.min.css')!!}
-    {!!Html::style('css/parsley.css')!!}
-    {!!Html::style('css/dataTables.css')!!}
-    {!!Html::style('web-fonts-with-css/css/fontawesome-all.min.css')!!}
-    {!!Html::style('web-fonts-with-css/css/fa-solid.min.css')!!}
-    {!!Html::style('web-fonts-with-css/css/fa-brands.min.css')!!}
-    {!!Html::style('web-fonts-with-css/css/fa-regular.min.css')!!}
-    {!!Html::style('https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic')!!}
-    {!!Html::style('https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800')!!}
-    {!!Html::style('css/clean-blog.min.css')!!}
-
+  <title>Asignacion</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Invest project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{{ asset ('images/fav-icon.png')}}" type="image/x-icon" />
+  {!!Html::style('styles/bootstrap4/bootstrap.min.css')!!}
+  {!!Html::style('plugins/font-awesome-4.7.0/css/font-awesome.min.css')!!}
+  {!!Html::style('plugins/OwlCarousel2-2.2.1/owl.carousel.css')!!}
+  {!!Html::style('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')!!}
+  {!!Html::style('plugins/OwlCarousel2-2.2.1/animate.css')!!}
+  {!!Html::style('styles/main_styles.css')!!}
+  {!!Html::style('styles/responsive.css')!!}
+  {!!Html::style('web-fonts-with-css/css/fontawesome-all.min.css')!!}
+  {!!Html::style('web-fonts-with-css/css/fa-solid.min.css')!!}
+  {!!Html::style('web-fonts-with-css/css/fa-brands.min.css')!!}
+  {!!Html::style('web-fonts-with-css/css/fa-regular.min.css')!!}
   </head>
+
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="/">Globodyne</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Registrar
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ route('profesional.create') }} ">Registrar Profesional</a>
-                <a class="dropdown-item" href="{{ route('proyecto.create') }}">Registrar Perfil</a>
-                <a class="dropdown-item" href="{{ route('estudiante.create') }}">Registrar Estudiantes</a>
-                <a class="dropdown-item" href="{{ route('carrera.create') }}">Registrar Carreras</a>
-                <a class="dropdown-item" href="{{ route('area.create') }}">Registrar Area</a>
-                <a class="dropdown-item" href="{{ route('modalidad.create') }}">Registrar Modalidad</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Listas
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ route('profesional.index') }} ">Lista de Profesionales</a>
-                <a class="dropdown-item" href="{{ route('proyecto.index') }}" >Lista de Perfiles</a>
-                <a class="dropdown-item" href="{{ route('proyecto.proyectosCulminados') }}" >Lista de Perfiles culminados</a>
-                <a class="dropdown-item" href="{{ route('estudiante.index') }} ">Lista de Estudiantes</a>
-                <a class="dropdown-item" href="{{ route('carrera.index') }} ">Lista de Carreras</a>
-                <a class="dropdown-item" href="{{ route('area.index') }} ">Lista de Areas</a>
-                <a class="dropdown-item" href="{{ route('subarea.index') }} ">Lista de Subareas</a>
-                <a class="dropdown-item" href="{{ route('modalidad.index') }} ">Lista de Modalidades</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">Sugerir</a>
-            </li>
-          </ul>
+
+<div class="super_container">
+  <!-- Home -->
+  <div class="home">
+    <div class="home_slider_container"> 
+      <!-- Home Slider -->
+      <div class="owl-carousel owl-theme home_slider">
+        <!-- Slider Item -->
+        <div class="owl-item">
+          <div class="slider_background" style="background-image:url('{{ asset ('images/home_slider_1.jpg')}}')"></div>
+          <div class="home_slider_content text-center">
+            <h1>@yield('titulo1')</h1>
+            <div class="home_slider_text">@yield('titulo2')</div>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{{ asset ('img/home-bg.jpg')}}')">
-    <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>@yield('titulo1')</h1>
-              <span class="subheading">
-                @yield('titulo2')
-              </span>
+    <!-- Header -->
+    <header class="header">
+      <!-- Top Bar -->
+      <div class="top_bar">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="top_bar_container d-flex flex-row align-items-center justify-content-start">
+                <div class="logo_container">
+                  <div class="logo">
+                    <a href="#">
+                      <div class="logo_line_1"><span>Magio</span>Soft</div>
+                      <div class="logo_line_2">Dearrollo de Software</div>
+                      <div class="logo_img"><img src="{{URL::asset('/images/logo.png')}}" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="top_bar_content ml-auto">
+                  <div class="register_login">
+                    <div class="register"><a href="#">Registrar</a></div>
+                    <div class="login"><a href="#">Ingresar</a></div>
+                  </div>
+                </div>
+                <div class="burger">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
           </div>
+        </div>    
+      </div>
+
+      <!-- Main Menu -->
+      <div class="main_menu">
+        <div class="container">
+            @yield('menu')
         </div>
       </div>
+
+      <!-- Menu -->
+
+      <div class="menu">
+        <div class="menu_register_login">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="menu_register_login_content d-flex flex-row align-items-center justify-content-end">
+                  <div class="register"><a href="#">register</a></div>
+                  <div class="login"><a href="#">login</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+        <ul class="menu_list">
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="#">home</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="about.html">about us</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="listings.html">services</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="news.html">portfolio</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="contact.html">blog</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu_item">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <a href="contact.html">contact</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </header>
+  </div>
+</div>
+  <!-- Fin Home -->
+  <!-- Contenedor -->
+  <div class="intro">
     <div class="container">
-
-      @yield('content')
-
+        @yield('content')
     </div>
-    <hr>
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="copyright text-muted">Copyright &copy; Globodyne 2018</p>
+  </div>
+  <!-- Fin Contenedor -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Izquierda -->
+        <div class="col-lg-6 footer_col">
+          <div class="footer_about">
+            <div class="logo_container footer_logo">
+              <div class="logo">
+                <a href="#">
+                  <div class="logo_line_1"><span>Magio</span>Soft</div>
+                  <div class="logo_line_2">Dearrollo de Software</div>
+                  <div class="logo_img"><img src="{{URL::asset('/images/logo.png')}}" alt=""></div>
+                </a>
+              </div>
+            </div>
+            <p class="footer_about_text">Una empresa dedicada a dar las mejores soluciones a los problemas de nuestros clientes, mejorando la experiencia del usuario y el confort de nuestro.</p>
+          </div>
+        </div>
+
+        <!-- Footer Derecha -->
+        <div class="col-lg-6 footer_col">
+          <div class="footer_links">
+            <div class="footer_title">Paginas Amigas</div>
+            <ul>
+              <li><a target="_blank" href="https://www.umss.edu.bo">UMSS</a></li>
+              <li><a target="_blank" href="https://websis.umss.edu.bo">Websis</a></li>
+              <li><a target="_blank" href="https://www.fcyt.umss.edu.bo">FCYT</a></li>
+              <li><a target="_blank" href="https://www.memi.umss.edu.bo">MEMI</a></li>
+              <li><a target="_blank" href="https://www.scesi.umss.edu.bo">SCESI</a></li>
+              <li><a target="_blank" href="https://informatica.fcyt.umss.edu.bo">Informatica</a></li>
+              <li><a target="_blank" href="https://claroline.cs.umss.edu.bo">LABINFSIS</a></li>
+              <li><a target="_blank" href="https://moodle3.umss.edu.bo">Moddle</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
-  {!! Html::script('jquery/jquery.min.js') !!}
-  {!! Html::script('jquery/jquery.js') !!}
-  {!! Html::script('jquery/parsley.min.js') !!}
-  {!! Html::script('jquery/parsley.js') !!}
-  {!! Html::script('jquery/jquery.dataTables.js') !!}
-  {!! Html::script('js/main.js') !!}
-  {!! Html::script('js/bootstrap.min.js') !!}
-  {!! Html::script('js/bootstrap.js') !!}
-  {!! Html::script('js/bootstrap.bundle.min.js') !!}
-  {!! Html::script('js/jqBootstrapValidation.min.js') !!}
-  {!! Html::script('js/clean-blog.min.js') !!}
-  {!! Html::script('js/buscador.js') !!}
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 order-md-1 order-2">
+            <div class="copyright_content d-flex flex-row align-items-center justify-content-start">
+              <div class="cr">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Los derechos reservados | Facultad de Ciencia y Tecnología por MagioSoft
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 order-md-2 order-1">
+            <nav class="footer_nav d-flex flex-row align-items-center justify-content-md-end">
+              <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/">Sugerir</a></li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </footer>
+</div>
+</body>
+  {!! Html::script('js/jquery-3.2.1.min.js') !!}
+  {!! Html::script('styles/bootstrap4/popper.js') !!}
+  {!! Html::script('styles/bootstrap4/bootstrap.min.js') !!}
+  {!! Html::script('plugins/OwlCarousel2-2.2.1/owl.carousel.js') !!}
+  {!! Html::script('plugins/easing/easing.js') !!}
+  {!! Html::script('plugins/parallax-js-master/parallax.min.js') !!}
+  {!! Html::script('js/custom.js') !!}
 </html>

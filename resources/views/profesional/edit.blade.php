@@ -1,8 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'ACTUALIZAR')
-@section('titulo2', 'INFORMACION DEL PROFESIONAL')
-@section('content')
-
+@extends('menu.menuedit')
+@section('titulo1edit', 'ACTUALIZAR')
+@section('titulo2edit', 'INFORMACION DEL PROFESIONAL')
+@section('contentedit')
 <div>
 
     {!! Form::open(['route'=>['profesional.update', $profesional->id],'method'=>'patch','data-parsley-validate'=>""]) !!}

@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', 'DE PORYECTOS FINALIZADOS')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE PROYECTOS FINALIZADOS')
+@section('contentlist')
 
 
 

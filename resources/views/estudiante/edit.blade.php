@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'ACTUALIZAR')
-@section('titulo2', 'INFORMACION DEL ESTUDIANTE')
-@section('content')
+@extends('menu.menuedit')
+@section('titulo1edit', 'ACTUALIZAR')
+@section('titulo2edit', 'INFORMACION DEL ESTUDIANTE')
+@section('contentedit')
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

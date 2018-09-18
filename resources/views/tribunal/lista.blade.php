@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'LISTA')
-@section('titulo2', 'DE TRIBINALES')
-@section('content')
+@extends('menu.menulist')
+@section('titulo1list', 'LISTA')
+@section('titulo2list', 'DE TRIBUNALES')
+@section('contentlist')
 <div class="form-control">
   <div class=" table-responsive">
     <table class="table ">

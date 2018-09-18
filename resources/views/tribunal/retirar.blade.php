@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'SELECCION')
-@section('titulo2', 'DE MOTIVO DE RENUNCIA PARA EL TRIBUNAL')
-@section('content')
+@extends('menu.menuasig')
+@section('titulo1asig', 'SELECCION')
+@section('titulo2asig', 'DE MOTIVO DE RENUNCIA PARA EL TRIBUNAL')
+@section('contentasig')
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>

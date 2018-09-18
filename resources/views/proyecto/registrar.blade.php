@@ -1,7 +1,7 @@
-@extends('layouts.principal')
-@section('titulo1', 'REGISTRO')
-@section('titulo2', 'DE PERFILES')
-@section('content')
+@extends('menu.menureg')
+@section('titulo1reg', 'REGISTRO')
+@section('titulo2reg', 'DE PERFILES')
+@section('contentreg')
 
 <div>
   <!-- Para mostrar error en las validaciones-->
