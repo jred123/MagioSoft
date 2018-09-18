@@ -37,6 +37,12 @@
         </div>
     </div>
     <div class="form-group row">
+        {!! Form::label('COD_UNI','codigo universitario',['class'=>'col-sm-2 col-form-label']) !!}
+        <div class="col-sm-10">
+            {!! Form::text('cod_univ', old('cod_univ'), ['class'=>'form-control','placeholder'=>"Ingrese el codigo"]) !!}
+        </div>
+    </div>
+    <div class="form-group row">
         {!! Form::label('TELF_PROF','Telefono',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('telefono', old('telefono'), ['class'=>'form-control','placeholder'=>"Ingrese el Telefono"]) !!}

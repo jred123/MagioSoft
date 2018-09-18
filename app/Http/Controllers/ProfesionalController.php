@@ -51,6 +51,7 @@ class ProfesionalController extends Controller
             $profesional->AP_PAT_PROF=$request->apellido_paterno;
             $profesional->AP_MAT_PROF=$request->apellido_materno;
             $profesional->titulo_id=$request->titulo;
+            $profesional->COD_UNI=$request->cod_univ;
             $profesional->TELF_PROF=$request->telefono;
             $profesional->CI_PROF=$request->ci;
             $profesional->Tipo=$request->Tipo;

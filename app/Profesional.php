@@ -17,6 +17,7 @@ class Profesional extends Model
     'AP_PAT_PROF',
     'AP_MAT_PROF',
     'titulo_id',
+    'COD_UNI',
     'TELF_PROF',
     'CI_PROF',
     'Tipo',
