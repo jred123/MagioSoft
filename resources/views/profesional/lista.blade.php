@@ -17,7 +17,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Apellido Paterno</th>
           <th scope="col">Apellido Materno</th>
-          <th scope="col">Codigo Universidad</th
+          <th scope="col">Codigo Universidad</th>
           <th scope="col">Teléfono</th>
           <th scope="col">Correo</th>
           <th></th>
