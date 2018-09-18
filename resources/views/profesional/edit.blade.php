@@ -36,6 +36,14 @@
             {!! Form::select('titulo', $titulo, $titulo ,['class'=>'form-control']) !!}
         </div>
     </div>
+
+    <div class="form-group row">
+        {!! Form::label('C_U','Codigo Universitario',['class'=>'col-sm-2 col-form-label']) !!}
+        <div class="col-sm-10">
+            {!! Form::text('cod_univ', $profesional->COD_UNI, ['class'=>'form-control','placeholder'=>"Ingrese el codigo"]) !!}
+        </div>
+    </div>
+
     <div class="form-group row">
         {!! Form::label('TELF_PROF','Telefono',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">

@@ -17,6 +17,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Apellido Paterno</th>
           <th scope="col">Apellido Materno</th>
+          <th scope="col">Codigo Universidad</th
           <th scope="col">Teléfono</th>
           <th scope="col">Correo</th>
           <th></th>
@@ -38,6 +39,7 @@
         <td>{{ $profesional -> NOM_PROF}} </td>
         <td>{{ $profesional -> AP_PAT_PROF}} </td>
         <td>{{ $profesional -> AP_MAT_PROF}} </td>
+        <td>{{ $profesional -> COD_UNI}} </td>
         <td>{{ $profesional -> TELF_PROF}} </td>
         <td>{{ $profesional -> CORREO_PROF}} </td>
         <td>
