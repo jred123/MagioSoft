@@ -90,64 +90,7 @@
               </div>
             </div>
           </div>
-            
         </div>
-        <ul class="menu_list">
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="#">home</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="about.html">about us</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="listings.html">services</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="news.html">portfolio</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html">blog</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html">contact</a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
       </div>
     </header>
   </div>
