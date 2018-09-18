@@ -213,7 +213,7 @@
             <nav class="footer_nav d-flex flex-row align-items-center justify-content-md-end">
               <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="about.html">Sugerir</a></li>
+                <li><a href="/">Sugerir</a></li>
 
               </ul>
             </nav>
