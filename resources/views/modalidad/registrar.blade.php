@@ -18,8 +18,8 @@
             {!! Form::textarea('DESC', old('DESC'), ['class'=>'form-control', 'data-parsley-pattern'=>"^[a-zA-Z ]+$",'placeholder'=>"Ingrese descripcion de la Modalidad",'data-parsley-error-message'=>"Ingrese solo letras y espacios"]) !!}
         </div>
     </div>
-    <a href="{{ route('modalidad.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('registrar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('modalidad.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('registrar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
 @endsection

@@ -18,8 +18,6 @@ class EstudianteController extends Controller
     public function index(Request $request)
     {
             $estudiantes = Estudiante::all();
-
-
             return view('estudiante.lista')->with(compact('estudiantes'));
         }
 

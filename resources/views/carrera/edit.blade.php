@@ -19,8 +19,8 @@
             {!! Form::text('NOM_CARRERA',$carrera->NOM_CARRERA,  ['class'=>'form-control', 'data-parsley-pattern'=>"^[a-zA-Z ]+$",'placeholder'=>"Ingrese el Nombre de la Carrera", 'required' =>'true','data-parsley-error-message'=>"Ingrese solo letras y espacios",'minlength'=>'3']) !!}
         </div>
     </div>
-    <a href="{{ route('carrera.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('actualizar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('carrera.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('actualizar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
     

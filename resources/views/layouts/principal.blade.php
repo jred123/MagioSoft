@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
   <title>Asignacion</title>
   <meta charset="utf-8">
@@ -90,64 +90,7 @@
               </div>
             </div>
           </div>
-            
         </div>
-        <ul class="menu_list">
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="#">home</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="about.html">about us</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="listings.html">services</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="news.html">portfolio</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html">blog</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu_item">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <a href="contact.html">contact</a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
       </div>
     </header>
   </div>
@@ -205,7 +148,7 @@
         <div class="row">
           <div class="col-md-4 order-md-1 order-2">
             <div class="copyright_content d-flex flex-row align-items-center justify-content-start">
-              <div class="cr">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Los derechos reservados | Facultad de Ciencia y Tecnología por MagioSoft
+              <div class="cr">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Los derechos reservados | Facultad de Ciencia y Tecnología | por MagioSoft
               </div>
             </div>
           </div>
@@ -231,4 +174,5 @@
   {!! Html::script('plugins/easing/easing.js') !!}
   {!! Html::script('plugins/parallax-js-master/parallax.min.js') !!}
   {!! Html::script('js/custom.js') !!}
+  {!! Html::script('js/main.js') !!}
 </html>

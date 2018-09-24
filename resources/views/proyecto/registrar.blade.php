@@ -95,8 +95,8 @@
 
 
 
-    <a href="{{ route('proyecto.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('registrar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('proyecto.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('registrar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
 @endsection

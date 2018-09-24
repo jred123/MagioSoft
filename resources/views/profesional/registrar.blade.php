@@ -67,8 +67,8 @@
             {!! Form::email('correo', old('correo'), ['class'=>'form-control','placeholder'=>"Ingrese un correo"]) !!}
         </div>
     </div>
-    <a href="{{ route('profesional.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('registrar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('profesional.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('registrar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
 @endsection

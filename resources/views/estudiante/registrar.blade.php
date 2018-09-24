@@ -54,8 +54,8 @@
         </div>
     </div>
     <div class="form-group pull-right">
-        <a href="{{ route('estudiante.index') }}" class="btn btn-danger">Cancel</a>
-        {!! Form::submit('registrar', ['type'=>"submit",'class'=>'btn btn-success', 'id'=>"btnreg"]) !!}
+        <a href="{{ route('estudiante.index') }}" class="btn btn-warning btn_White">Cancel</a>
+        {!! Form::submit('registrar', ['type'=>"submit",'class'=>'btn btn-warning btn_White', 'id'=>"btnreg"]) !!}
 
     </div>
     {!! Form::close() !!}

@@ -69,8 +69,8 @@
             {!! Form::email('correo', $profesional->CORREO_PROF, ['class'=>'form-control','placeholder'=>"Ingrese un correo"]) !!}
         </div>
     </div>
-    <a href="{{ route('profesional.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('actualizar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('profesional.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('actualizar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
 
