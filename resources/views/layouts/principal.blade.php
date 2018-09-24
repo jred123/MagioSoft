@@ -13,7 +13,6 @@
   {!!Html::style('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')!!}
   {!!Html::style('plugins/OwlCarousel2-2.2.1/animate.css')!!}
   {!!Html::style('styles/main_styles.css')!!}
-  {!!Html::style('styles/pagination.css')!!}
   {!!Html::style('styles/responsive.css')!!}
   {!!Html::style('web-fonts-with-css/css/fontawesome-all.min.css')!!}
   {!!Html::style('web-fonts-with-css/css/fa-solid.min.css')!!}
@@ -175,7 +174,5 @@
   {!! Html::script('plugins/easing/easing.js') !!}
   {!! Html::script('plugins/parallax-js-master/parallax.min.js') !!}
   {!! Html::script('js/custom.js') !!}
-  {!! Html::script('js/pagination.min.js') !!}
-  {!! Html::script('js/pagination.js') !!}
   {!! Html::script('js/main.js') !!}
 </html>

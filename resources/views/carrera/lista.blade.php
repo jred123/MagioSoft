@@ -3,7 +3,7 @@
 @section('titulo2list', 'DE CARRERAS')
 @section('contentlist')
 <div class="table-responsive">
-  <table class="table" id="table_id">
+<table id="mytable" class="table table-bordered table-striped">
     <thead class="thead-light">
       <tr>
         <th scope="col">Codigo Carrera</th>
@@ -48,5 +48,6 @@
     </tbody>
   </table>
 </div>
+
 
 @endsection

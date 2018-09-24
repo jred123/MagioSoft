@@ -4,7 +4,20 @@
 @section('contentlist')
 
 <div class="table-responsive table-striped">
-<table class="table" id="table_id">
+<h4>Seleccione el numero de filas </h4>
+<div class="form-group">
+    <select name="state" id="maxRows" class="form-control" style="width:150px;">
+        <option value="5000">Ver Todo</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+</div>
+<table id="mytable" class="table table-bordered table-striped">
     <thead class="thead-light">
       <tr>
           <th scope="col">CodigoSis</th>
@@ -58,6 +71,9 @@
       @endforeach
     </tbody>
   </table>
+<nav aria-label="...">
+  <ul class="pagination pagination-lg"></ul>
+</nav>
 </div>
 
 @endsection
