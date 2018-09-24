@@ -12,7 +12,7 @@ class ProfesionalController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * return datatables( Client::paginate() );
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)

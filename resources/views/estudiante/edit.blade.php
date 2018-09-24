@@ -59,8 +59,8 @@
             {!! Form::email('correo', $estudiante->CORRETO_EST, ['class'=>'form-control','placeholder'=>"Ingrese un correo"]) !!}
         </div>
     </div>
-    <a href="{{ route('estudiante.index') }}" class="btn btn-danger">Cancel</a>
-    {!! Form::submit('actualizar', ['class'=>'btn btn-success']) !!}
+    <a href="{{ route('estudiante.index') }}" class="btn btn-warning btn_White">Cancel</a>
+    {!! Form::submit('actualizar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
 
