@@ -19,8 +19,8 @@ class ProfesionalController extends Controller
     {
       $titulos = Titulo::pluck('nombre', 'id');
       $profesionales = Profesional::all();
-
-        return view('profesional.lista')->with(compact('profesionales', 'titulos'));
+      $profesionales = Profesional::paginate(15);
+      return view('profesional.lista')->with(compact('profesionales', 'titulos'));
     }
 
     /**

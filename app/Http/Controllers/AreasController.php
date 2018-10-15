@@ -14,8 +14,9 @@ class AreasController extends Controller
      */
     public function index()
     {
-        $data = Area::all();
-        return view('area.lista',['areas'=> $data ]);
+        $areas = Area::all();
+        $areas = Area::paginate(15);
+        return view('area.lista',['areas'=> $areas ]);
     }
 
     /**

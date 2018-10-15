@@ -174,5 +174,5 @@
   {!! Html::script('plugins/easing/easing.js') !!}
   {!! Html::script('plugins/parallax-js-master/parallax.min.js') !!}
   {!! Html::script('js/custom.js') !!}
-  {!! Html::script('js/main.js') !!}
+
 </html>

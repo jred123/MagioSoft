@@ -10,16 +10,6 @@
 
 
 <div class="table-responsive">
-<h4>Seleccione el numero de filas </h4>
-<div class="form-group">
-    <select name="state" id="maxRows" class="form-control" style="width:150px;">
-        <option value="5000">Ver Todo</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-    </select>
-</div>
 <table id="mytable" class="table table-bordered table-striped">
     <thead class="thead-light">
       <tr>
@@ -97,9 +87,7 @@
       @endforeach
     </tbody>
   </table>
-<nav aria-label="...">
-  <ul class="pagination pagination-lg"></ul>
-</nav>
+{!!$profesionales->render("pagination::bootstrap-4")!!}
 </div>
 
 @endsection
