@@ -12,7 +12,14 @@
     </div><br />
 @endif
 <div>
+    <div class="row">
+        <div class="col">
+            <div class="section_title_container text-center">
+                <div class="section_subtitle">Los campos con (*) son obligatorios</div>
 
+            </div>
+        </div>
+    </div>
 
     {!! Form::open(['route'=>['estudiante.update', $estudiante->id],'method'=>'put test-form','data-parsley-validate'=>""]) !!}
     {{method_field('PUT')}}
@@ -24,13 +31,13 @@
         </div>
     </div>
     <div class="form-group row">
-        {!! Form::label('NOM_EST','Nombre',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('NOM_EST','Nombre (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('nombre',$estudiante->NOM_EST, ['class'=>'form-control','placeholder'=>"Ingrese el Nombre"]) !!}
         </div>
     </div>
     <div class="form-group row">
-        {!! Form::label('AP_PAT_EST','Apellido Paterno',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('AP_PAT_EST','Apellido Paterno (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('apellido_paterno',$estudiante->AP_PAT_EST, ['class'=>'form-control','placeholder'=>"Ingrese el Apellido Paterno"]) !!}
         </div>
@@ -42,19 +49,19 @@
         </div>
     </div>
     <div class="form-group row">
-        {!! Form::label('CI','CI',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('CI','CI (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('ci', $estudiante->CI, ['class'=>'form-control','placeholder'=>"Ingrese el CI"]) !!}
         </div>
     </div>
     <div class="form-group row">
-        {!! Form::label('TELF','TELF',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('TELF','Telefono (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('telefono', $estudiante->TELF, ['class'=>'form-control','placeholder'=>"Ingrese el Telefono"]) !!}
         </div>
     </div>
     <div class="form-group row">
-        {!! Form::label('CORRETO_EST','Correo',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('CORRETO_EST','Correo (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::email('correo', $estudiante->CORRETO_EST, ['class'=>'form-control','placeholder'=>"Ingrese un correo"]) !!}
         </div>
