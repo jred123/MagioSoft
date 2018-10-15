@@ -4,11 +4,18 @@
 @section('contentedit')
 
 <div>
+  <div class="row">
+        <div class="col">
+            <div class="section_title_container text-center">
+                <div class="section_subtitle">Los campos con (*) son obligatorios</div>
 
+            </div>
+        </div>
+    </div>
     {!! Form::open(['route'=>['proyecto.update', $proyecto->id],'method'=>'patch']) !!}
 
     <div class="form-group row">
-        {!! Form::label('TITULO_PERFIL','Titulo Perfil',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('TITULO_PERFIL','Titulo Perfil (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::text('titulo', $proyecto->TITULO_PERFIL, ['class'=>'form-control','placeholder'=>"Ingrese el Titulo del Perfil"]) !!}
         </div>
@@ -16,21 +23,21 @@
 
 
     <div class="form-group row">
-        {!! Form::label('OBJ_GRAL','Objetivo General',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('OBJ_GRAL','Objetivo General (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::textarea('objetivo_general', $proyecto->OBJ_GRAL, ['class'=>'form-control','placeholder'=>"Ingrese el Objetivo General"]) !!}
         </div>
     </div>
 
     <div class="form-group row">
-        {!! Form::label('OBJ_ESP','Objetivos Especificos',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('OBJ_ESP','Objetivos Especificos (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::textarea('objetivos_especificos',$proyecto->OBJ_ESP, ['class'=>'form-control','placeholder'=>"Ingrese Objetivos Especificos"]) !!}
         </div>
     </div>
 
     <div class="form-group row">
-        {!! Form::label('DESCRIPCION','Descripcion',['class'=>'col-sm-2 col-form-label']) !!}
+        {!! Form::label('DESCRIPCION','Descripcion (*)',['class'=>'col-sm-2 col-form-label']) !!}
         <div class="col-sm-10">
             {!! Form::textarea('descripcion', $proyecto->DESC, ['class'=>'form-control','placeholder'=>"Ingrese la Descripcion"]) !!}
         </div>
