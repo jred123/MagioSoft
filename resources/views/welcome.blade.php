@@ -178,11 +178,11 @@
 	<div class="col-lg-6">
 		<div class="intro_content">
 			<div class="intro_title_container">
-				<div class="intro_subtitle">Sistema de AsignaciÓn</div>
-				<h1 class="intro_title">AsignaciÓn</h1>
+				<div class="intro_subtitle">Perfil</div>
+				<h1 class="intro_title">Sistema de Registro de Perfiles</h1>
 			</div>
 			<div class="intro_text">
-				<p>Para la AsignaciÓn de un tribunal con mejor relevancia se llevara acabo un desarrollo en la implementaciÓn de todos los posible jurados, ya sean internos o externos, usando un algoritmo de de busqueda basado en secuencias.</p>
+				<p>Para el mejor control y registro de los perfiles de los estudiantes, se desarrollo esta plataforma con la intencion de facilitar a los estudiantes el registro de sus temas y tutores.</p>
 			</div>
 		</div>
 	</div>
