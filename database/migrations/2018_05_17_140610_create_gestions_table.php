@@ -18,6 +18,7 @@ class CreateGestionsTable extends Migration
             $table->date('FECHA_INI')->nullable()->default(null);
             $table->date('FECHA_FIN')->nullable()->default(null);
             $table->integer('PERIODO')->nullable()->default(null);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

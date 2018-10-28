@@ -29,6 +29,8 @@ Route::get('estudiante/ocultar/{id}', 'EstudianteController@ocultar');
 Route::resource('estudiante', 'EstudianteController');
 Route::get('modalidad/ocultar/{id}', 'ModalidadController@ocultar');
 Route::resource('modalidad', 'ModalidadController');
+Route::get('gestion/ocultar/{id}', 'GestionController@ocultar');
+Route::resource('gestion', 'GestionController');
 Route::get('carrera/ocultar/{id}', 'CarreraController@ocultar');
 Route::resource('carrera', 'CarreraController');
 
