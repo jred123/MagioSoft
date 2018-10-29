@@ -61,15 +61,15 @@
                <a href='{{ url('profesional.ocultar',$profesional->id)}}' onclick="return confirm('¿Esta seguro de eliminar este Profesional?')" data-toggle="tooltip" data-placement="right" title="Eliminar">
                       <i class="fas fa-trash-alt btn-warning" aria-hidden="true"></i>
                </a>
-               <a href='{{ route('tribunal.listaReasignar',$profesional->id)}}' data-toggle="tooltip" data-placement="right" title="reasignar trinubal">
+               <!--<a href='{{ route('tribunal.listaReasignar',$profesional->id)}}' data-toggle="tooltip" data-placement="right" title="reasignar trinubal">
                       <i class="fas fa-eraser btn-warning" aria-hidden="true" ></i>
-               </a>
+               </a>-->
                <a href='{{ route('tribunal.listaTutores',$profesional->id )}}' data-toggle="tooltip" data-placement="right" title="ver lista de tutorías">
                   <i class="fa fa-book btn-warning" aria-hidden="true"></i>
                 </a>
-                <a href='{{ route('tribunal.listaReasignar',$profesional->id )}}' data-toggle="tooltip" data-placement="right" title="ver proyectos de los que ha sido tribunal">
+                <!--<a href='{{ route('tribunal.listaReasignar',$profesional->id )}}' data-toggle="tooltip" data-placement="right" title="ver proyectos de los que ha sido tribunal">
                   <i class="fa fa-book btn-warning" aria-hidden="true"></i>
-                </a>
+                </a>-->
              </div>
           </div>
         </td>
