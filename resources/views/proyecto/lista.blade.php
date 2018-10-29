@@ -15,7 +15,7 @@
           <div class="text-center">
             <h3>
               <a href='{{ route('proyecto.create')}}' data-toggle="tooltip" data-placement="right" title="Registar">
-                <i class="fas fa-plus-square" aria-hidden="true" ></i>
+                <i class="fas fa-plus-square btn-warning" aria-hidden="true" ></i>
               </a>
             </h3>
           </div>
@@ -48,21 +48,25 @@
           @endforeach
         </td>
         <td>
-          <div class="text-center">
-            <h4>
-              <a href='{{ route('proyecto.edit',$proyecto->id)}}' data-toggle="tooltip" data-placement="right" title="Editar">
-                <i class="fas fa-pencil-alt"aria-hidden="true"></i>
+          <div class="btn-group">
+             <button type="button" class="btn btn-warning btn_White">Ver</button>
+             <button type="button" class="btn btn-warning btn_White dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <span class="sr-only">Toggle Dropdown</span>
+             </button>
+             <div class="dropdown-menu">
+               <a href='{{ route('proyecto.edit',$proyecto->id)}}' data-toggle="tooltip" data-placement="right" title="Editar">
+                <i class="fas fa-pencil-alt btn-warning"aria-hidden="true"></i>
               </a>
-              <a href='{{ route('tribunal.asignar',$proyecto->id) }}' data-toggle="tooltip" data-placement="right" title="Asignar tribunales">
-                <i class="fas fa-gavel" aria-hidden="true"></i>
-              </a>
+              <!--<a href='{{ route('tribunal.asignar',$proyecto->id) }}' data-toggle="tooltip" data-placement="right" title="Asignar tribunales">
+                <i class="fas fa-gavel btn-warning" aria-hidden="true"></i>
+              </a>-->
               <a href='{{ route('proyecto.finalizar',$proyecto->id) }}' data-toggle="tooltip" data-placement="right" title="finalizar ciclo">
-                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                <i class="fa fa-clipboard btn-warning" aria-hidden="true"></i>
               </a>
               <a href='{{ url('proyecto/ocultar',$proyecto->id)}}' onclick="return confirm('¿Esta seguro de eliminar este Proyecto?')" data-toggle="tooltip" data-placement="right" title="Eliminar">
-                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                <i class="fas fa-trash-alt btn-warning" aria-hidden="true"></i>
               </a>
-            </h4>
+             </div>
           </div>
         </td>
       </tr>
