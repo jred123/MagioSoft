@@ -20,7 +20,7 @@
             <div class="text-center">
               <h3>
                 <a href='{{ route('estudiante.create')}}' data-toggle="tooltip" data-placement="right" title="Registar">
-                  <i class="fas fa-plus-square" aria-hidden="true" ></i>
+                  <i class="fas fa-plus-square btn-warning" aria-hidden="true" ></i>
                 </a>
               </h3>
             </div>
@@ -42,7 +42,7 @@
             <div class="text-center">
                 <h4>
                   <a href='{{route('estudiante.edit',$estudiante->id)}}' data-toggle="tooltip" data-placement="right" title="Editar">
-                      <i class="fas fa-pencil-alt"aria-hidden="true"></i>
+                      <i class="fas fa-pencil-alt btn-warning"aria-hidden="true"></i>
                   </a>
               </h4>
             </div>
@@ -51,7 +51,7 @@
             <div class="text-center">
                 <h4>
                   <a href='{{ url('estudiante.ocultar',$estudiante->id)}}' onclick="return confirm('¿Esta seguro de eliminar este Estudiante?')" data-toggle="tooltip" data-placement="right" title="Eliminar">
-                      <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                      <i class="fas fa-trash-alt btn-warning" aria-hidden="true"></i>
                   </a>
               </h4>
             </div>
