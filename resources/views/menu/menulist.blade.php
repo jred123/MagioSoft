@@ -162,7 +162,7 @@
                           <polyline class="arrow_d" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="0.022,-0.178 4.5,4.331 9.091,-0.275   "/>
                         </g>
                       </svg>
-                    </a></li>-->
+                    </a></li>
                   </ul>
                 </div>
                 <div class="main_menu_contact ml-auto">
@@ -181,7 +181,7 @@
                       </form>
                     </div>
                   </div>
-                </div>
+                </div>s-->
               </div>
             </div>
           </div>

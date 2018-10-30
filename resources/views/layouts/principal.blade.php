@@ -56,8 +56,7 @@
                 </div>
                 <div class="top_bar_content ml-auto">
                   <div class="register_login">
-                    <div class="register"><a href="#">Registrar</a></div>
-                    <div class="login"><a href="#">Ingresar</a></div>
+                    <div class="login"><a href="ingresar">Ingresar</a></div>
                   </div>
                 </div>
                 <div class="burger">
@@ -156,7 +155,6 @@
             <nav class="footer_nav d-flex flex-row align-items-center justify-content-md-end">
               <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/">Sugerir</a></li>
 
               </ul>
             </nav>

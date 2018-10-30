@@ -42,7 +42,9 @@ Route::any('subarea/update/{id}', 'SubareaController@update')->name('subarea.upd
 Route::any('subarea/profesionales/{s}', 'SubareaController@indexProfesionales')->name('subarea.profesional');
 Route::any('subarea/eliminarProfesional/{idprofesional}/{idsubarea}', 'SubareaController@ocultarProfesional')->name('subarea.ocultarProfesional');
 
-
+Route::any('ingresar', function () {
+    return view('ingresar.index');
+});
 Route::any('subarea/registrar/{area}', 'SubareaController@recibe')->name('subarea.recibe');
 
 
