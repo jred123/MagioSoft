@@ -19,7 +19,7 @@ class ProfesionalController extends Controller
     {
       $titulos = Titulo::pluck('nombre', 'id');
       $profesionales = Profesional::all();
-      $profesionales = Profesional::paginate(15);
+      $profesionales = Profesional::Buscar($request->NOM_PROF)->orderBy('id')->paginate(10);
       return view('profesional.lista')->with(compact('profesionales', 'titulos'));
     }
 

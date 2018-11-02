@@ -93,6 +93,9 @@ class Proyecto extends Model
                     ->orWhere("AP_PAT_PROF", "LIKE", "%$nombre%")
                     ->orWhere("AP_MAT_PROF", "LIKE", "%$nombre%");
     }
+    public function scopeBuscar($query, $cadena){
+     return $query->where(DB::raw("CONCAT(TITULO_PERFIL)"), "LIKE", "%$cadena%");
+   }
 
 
 }

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 use App\SubArea;
 class Area extends Model
 {
@@ -27,4 +28,7 @@ class Area extends Model
     {
         return $this->belongsToMany(Profesional::class, 'area_profesional')->withTimestamps();
     }
+    public function scopeBuscar($query, $cadena){
+     return $query->where(DB::raw("CONCAT(COD_AREA, ' ', NOMBRE_AREA)"), "LIKE", "%$cadena%");
+   }
 }

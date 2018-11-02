@@ -22,7 +22,7 @@ class ProyectoController extends Controller
     public function index(Request $request)
     {
         $proyectos = Proyecto::all();
-
+        $proyectos = Proyecto::Buscar($request->TITULO_PERFIL)->orderBy('id')->paginate(10);
         return view('proyecto.lista')->with(compact('proyectos'));
     }
 
