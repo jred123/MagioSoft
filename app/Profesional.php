@@ -65,4 +65,7 @@ class Profesional extends Model
      }
 
     }
+    public function scopeBuscar($query, $cadena){
+     return $query->where(DB::raw("CONCAT(NOM_PROF, ' ', AP_PAT_PROF, ' ', AP_MAT_PROF, ' ',CI_PROF, ' ', COD_UNI )"), "LIKE", "%$cadena%");
+    }
 }

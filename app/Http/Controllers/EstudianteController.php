@@ -17,16 +17,10 @@ class EstudianteController extends Controller
 
     public function index(Request $request)
     {
-            $estudiantes = Estudiante::all();
-            $estudiantes = Estudiante::paginate(15);
-            return view('estudiante.lista')->with(compact('estudiantes'));
-        }
-
-
-
-
-
-
+        $estudiantes = Estudiante::all();
+        $estudiantes = Estudiante::Buscar($request->NOM_EST)->orderBy('COD_SIS')->paginate(10);
+        return view('estudiante.lista')->with(compact('estudiantes'));
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -12,10 +12,10 @@ class AreasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $areas = Area::all();
-        $areas = Area::paginate(15);
+        $areas = Area::Buscar($request->NOMBRE_AREA)->orderBy('COD_AREA')->paginate(10);
         return view('area.lista',['areas'=> $areas ]);
     }
 

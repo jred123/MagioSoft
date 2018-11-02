@@ -2,6 +2,24 @@
 @section('titulo1list', 'LISTA')
 @section('titulo2list', 'DE PERFILES')
 @section('contentlist')
+<div class="row justify-content-center">
+  <div class="col-12">
+      {!! Form::open(['route'=>'proyecto.index','method'=>'GET','data-parsley-validate'=>"",'class'=>'card card-sm']) !!}
+        <div class="card-body row no-gutters align-items-center">
+            <div class="col">
+              {!! Form::text('TITULO_PERFIL', null, ['class'=>'form-control form-control-lg form-control-borderless', 'data-parsley-pattern'=>"^[a-zA-Z ]+$",'placeholder'=>"Buscar Perfil"]) !!}
+            </div>
+            <div class="col-auto">
+              {!! Form::submit('Buscar', ['class'=>'btn btn-lg btn-warning btn_White']) !!}
+            </div>
+            <!--end of col-->
+        </div>
+      {!! Form::close() !!}
+  </div>
+  <!--end of col-->
+</div>
+
+
 <div class="table-responsive">
   <table class="table" id="table_id">
     <thead class="thead-light">

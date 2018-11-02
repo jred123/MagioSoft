@@ -7,6 +7,23 @@
 
 
   {!! Form::close() !!}
+<div class="row justify-content-center">
+  <div class="col-12">
+      {!! Form::open(['route'=>'profesional.index','method'=>'GET','data-parsley-validate'=>"",'class'=>'card card-sm']) !!}
+        <div class="card-body row no-gutters align-items-center">
+            <div class="col">
+              {!! Form::text('NOM_PROF', null, ['class'=>'form-control form-control-lg form-control-borderless', 'data-parsley-pattern'=>"^[a-zA-Z ]+$",'placeholder'=>"Buscar Nombre de Docente"]) !!}
+            </div>
+            <div class="col-auto">
+              {!! Form::submit('Buscar', ['class'=>'btn btn-lg btn-warning btn_White']) !!}
+            </div>
+            <!--end of col-->
+        </div>
+      {!! Form::close() !!}
+  </div>
+  <!--end of col-->
+</div>
+
 
 
 <div class="table-responsive">
