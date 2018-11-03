@@ -1,8 +1,7 @@
 @extends('menu.menulist')
-@section('titulo1list', 'LISTA')
-@section('titulo2list', 'DE PROYECTOS FINALIZADOS')
+@section('titulo1list', 'RREPORTE')
+@section('titulo2list', 'DE PROYECTOS')
 @section('contentlist')
-
 
 
 <div class="table-responsive">
@@ -10,10 +9,10 @@
     <thead class="thead-light">
       <tr>
         <th scope="col">Código</th>
-        <th scope="col">Título</th>
         <th scope="col">Estudiante</th>
         <th scope="col">Tutor</th>
-        <th scope="col">Tribunal</th>
+        <th scope="col">Fecha Registro</th>
+        <th scope="col">Fecha Vencimiento</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +20,6 @@
       @if ($proyecto->CICLO !='en progreso')
       <tr>
           <td>{{ $proyecto -> id}} </td>
-          <td>{{ $proyecto -> TITULO_PERFIL}} </td>
           <td>{{ $proyecto -> estudiante->pluck('full_name', 'id')->implode(' ')}} </td>
           <td>
               @foreach ($proyecto->estudiante as $e)
@@ -34,15 +32,8 @@
               @endforeach
               @endforeach
             </td>
-            <td>
-                @foreach ($proyecto->profesional as $tribunal)
-                  @if ($tribunal->pivot->motivo_id==1)
-
-                    {{ $tribunal->NOM_PROF.' '.$tribunal->AP_PAT_PROF.' '.$tribunal->AP_MAT_PROF.','}}
-
-                  @endif
-                @endforeach
-            </td>
+            <td>{{ $proyecto -> FECHA_REGISTRO}}</td>
+            <td>{{ $proyecto -> GESTION_LIMITE}} </td>
         </tr>
         @endif
         @endforeach

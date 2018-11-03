@@ -1,9 +1,9 @@
 @extends('layouts.principal')
 @section('titulo1')
-	@yield('titulo1list')
+	@yield('titulo1rep')
 @endsection
 @section('titulo2')
-	@yield('titulo2list')
+	@yield('titulo2rep')
 @endsection
 @section('menu')
 <div class="row">
@@ -77,17 +77,9 @@
                             </g>
                           </svg>
                         </a></li>
-                        <li><a href="{{ route('gestion.create') }}">Registrar gestion
-                          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
-                            <g>
-                              <polyline class="arrow_d" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="0.022,-0.178 4.5,4.331 9.091,-0.275   "/>
-                            </g>
-                          </svg>
-                        </a></li>
                       </ul>
                     </li>
-                    <li class="active hassubs">
+                    <li class=" hassubs">
                       <a href="#">Listas
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
@@ -145,17 +137,9 @@
                             </g>
                           </svg>
                         </a></li>
-                        <li><a href="{{ route('gestion.index') }}">Lista de Gestiones
-                          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
-                            <g>
-                              <polyline class="arrow_d" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="0.022,-0.178 4.5,4.331 9.091,-0.275   "/>
-                            </g>
-                          </svg>
-                        </a></li>
                       </ul>
                     </li>
-                    <li class=" "><a href="{{ route('proyecto.reporte') }}">Reportes
+                    <li class="active "><a href="{{ route('proyecto.reporte') }}">Reportes
                       <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
                         <g>
@@ -163,14 +147,14 @@
                         </g>
                       </svg>
                     </a></li>
-                    <!--<li  class=""><a href="/">Sugerir
+                    <!--<li  class="active"><a href="/">Sugerir
                       <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
                         <g>
                           <polyline class="arrow_d" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="0.022,-0.178 4.5,4.331 9.091,-0.275   "/>
                         </g>
                       </svg>
-                    </a></li>
+                    </a></li>-->
                   </ul>
                 </div>
                 <div class="main_menu_contact ml-auto">
@@ -189,11 +173,11 @@
                       </form>
                     </div>
                   </div>
-                </div>s-->
+                </div>
               </div>
             </div>
           </div>
 @endsection
 @section('content')
-	@yield('contentlist')
+	@yield('contentrep')
 @endsection

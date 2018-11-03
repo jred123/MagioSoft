@@ -190,4 +190,9 @@ class ProyectoController extends Controller
         $proyectos = Proyecto::all();
         return view('proyecto.listaCulminados')->with(compact('proyectos'));
     }
+    public function reporte(Request $request){
+
+        $proyectos = Proyecto::all();
+        return view('proyecto.reporte')->with(compact('proyectos'));
+    }
 }

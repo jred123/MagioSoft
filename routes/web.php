@@ -21,6 +21,7 @@ Route::any('proyecto/ocultar/{id}', 'ProyectoController@ocultar');
 Route::resource('proyecto', 'ProyectoController');
 Route::any('proyecto/finalizar/{id}', 'ProyectoController@finalizar')->name('proyecto.finalizar');
 Route::any('proyectosCulminados', 'ProyectoController@proyectosCulminados')->name('proyecto.proyectosCulminados');
+Route::any('reporte', 'ProyectoController@reporte')->name('proyecto.reporte');
 Route::any('terminarCiclo/{id}', 'ProyectoController@terminarCiclo')->name('proyecto.terminarCiclo');
 
 Route::get('area/ocultar/{id}', 'AreasController@ocultar');
