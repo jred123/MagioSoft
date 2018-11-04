@@ -1,10 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
-use App\Modalidades;
+
+use App\User;
 use Illuminate\Http\Request;
 use DB;
-class ModalidadController extends Controller
+
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,9 @@ class ModalidadController extends Controller
      */
     public function index()
     {
-        $data = Modalidades::all();
-        return view('modalidad.lista',['modalidades'=> $data ]);
+            $users = User::all();
+            $users = User::paginate(15);
+            return view('usuario.lista',['users'=> $users ]);          
     }
 
     /**
@@ -24,7 +26,7 @@ class ModalidadController extends Controller
      */
     public function create()
     {
-        return view('modalidad.registrar');
+        return view('auth.register'); 
     }
 
     /**
@@ -33,65 +35,68 @@ class ModalidadController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id)
     {
-        Modalidades::create($request->all());
-        return redirect('modalidad');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $modalidades
+     * @param  \App\titulo  $titulo
      * @return \Illuminate\Http\Response
      */
-    public function show( $id)
+    public function show($id)
     {
-       //
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $modalidades
+     * @param  \App\titulo  $titulo
      * @return \Illuminate\Http\Response
      */
-    public function edit( $id)
+    public function edit($id)
     {
-        $modalidad = Modalidades::findOrFail($id);
-        return view('modalidad.edit',[
-            'modalidad'=>$modalidad
-        ]);
+        $users = User::findOrFail($id);
+        return view('usuario.edit',['users'=>$users]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $modalidades
+     * @param  \App\titulo  $titulo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,  $id)
+    public function update($id )
     {
-        Modalidades::findOrFail($id)->update($request->all());
-        return redirect('modalidad');
+        User::findOrFail($id)->update($request->all());
+        return redirect('users');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $modalidades
+     * @param  \App\titulo  $titulo
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+      public function destroy($id)
     {
-        Modalidades::findOrFail()->delete($id);
-        return redirect('modalidad');
+       $users=User::find($id);
+       $users->delete();
+
+       flash::error('El usuario ' . $users->name. 'a sido borrado');
+       return redirect()-> route('usuario.lista');
     }
 
     public function ocultar($id)
     {
-        Modalidades::findOrFail($id)->delete();
-        return redirect('modalidad');
-    }
+      $users=User::find($id);
+      $users->delete();
+     
+       return redirect()-> route('usuario.index');
+  
+    } 
 }
