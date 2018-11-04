@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*Route::get('ingresar', function(){
+	return view('ingresar'); 
+});*/
+
+
+Route::resource('usuario','UsuarioController');
+Route::get('usuario/ocultar/{id}', 'UsuarioController@ocultar');
+
+
+
 Route::get('profesional/ocultar/{id}', 'ProfesionalController@ocultar');
 Route::resource('profesional', 'ProfesionalController');
 Route::any('proyecto/ocultar/{id}', 'ProyectoController@ocultar');
@@ -43,9 +53,17 @@ Route::any('subarea/update/{id}', 'SubareaController@update')->name('subarea.upd
 Route::any('subarea/profesionales/{s}', 'SubareaController@indexProfesionales')->name('subarea.profesional');
 Route::any('subarea/eliminarProfesional/{idprofesional}/{idsubarea}', 'SubareaController@ocultarProfesional')->name('subarea.ocultarProfesional');
 
-Route::any('ingresar', function () {
+/*Route::any('ingresar', function () {
     return view('ingresar.index');
-});
+});*/
+
+
+Route::get('lista',function (){
+	    $users = \App\User::All();
+        return view('usuario.lista',compact('users'));
+    });
+    
+
 Route::any('subarea/registrar/{area}', 'SubareaController@recibe')->name('subarea.recibe');
 
 
@@ -62,3 +80,35 @@ Route::any('tribunal/retirar/{idprofesional}/{idproyecto}', 'TribunalController@
 ->name('tribunal.retirar');
 Route::any('tribunal/listaReasignar/{id}', 'TribunalController@listaReasignar')
 ->name('tribunal.listaReasignar');
+
+
+Route::group([
+    'middleware' => 'UserStandard',
+    'prefix' => 'userstandard',
+], function () {
+
+    Route::get('/usuario', 'UsuarioController@index');
+
+ 
+});
+
+Route::get('register', function () {
+    return view('auth.register');
+});
+
+Route::get('login', function () {
+    return view('auth.login');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('standard', function () {
+    return view('menu.menulistuserstandard');
+});
+

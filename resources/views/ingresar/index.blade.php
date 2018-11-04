@@ -1,5 +1,5 @@
 @extends('menu.menuLogin')
-@section('titulo1menu', 'Ingresar')
+@section('titulo1menu', 'Ingreso')
 @section('titulo2menu', 'al sistema')
 @section('contentmenu')
 
@@ -10,7 +10,8 @@
    <h2>Login</h2>
    <p>Por favor ingrese su usuario y contraseña</p>
    </div>
-    <form id="Login">
+   
+        <form id="Login">
         <div class="form-group">
             <input type="email" class="form-control" id="inputUser" placeholder="Nombre de usuario">
         </div>
@@ -18,10 +19,10 @@
             <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
         </div>
         <button type="submit" class="btn btn-primary">Ingresar</button>
-
-    </form>
+    
+     </form>
     </div>
-<p class="botto-text"> Designed by Sunil Rajput</p>
+<!--<p class="botto-text"> Designed by Sunil Rajput</p>-->
 </div></div>
 
 @endsection

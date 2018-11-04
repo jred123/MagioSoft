@@ -25,6 +25,7 @@
     <thead class="thead-light">
       <tr>
         <th scope="col">Código</th>
+       
         <th scope="col">Título</th>
         <th scope="col">Estudiante</th>
         <th scope="col">Tutor</th>
@@ -44,7 +45,10 @@
       @foreach($proyectos as $proyecto)
       @if ($proyecto->CICLO == 'en progreso')
       <tr>
-        <td>{{ $proyecto -> id}} </td>
+        <td> 
+          {{ $proyecto -> modalidad -> INICIAL}}
+          {{ $proyecto -> id}}
+         </td>
         <td>{{ $proyecto -> TITULO_PERFIL}} </td>
         <td>{{ $proyecto -> estudiante->pluck('full_name', 'id')->implode(' ')}} </td>
         <td>

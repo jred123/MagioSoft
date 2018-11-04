@@ -54,10 +54,27 @@
                     </a>
                   </div>
                 </div>
+
                 <div class="top_bar_content ml-auto">
-                  <div class="register_login">
-                    <div class="login"><a href="ingresar">Ingresar</a></div>
-                  </div>
+                  <div class="register_login">  
+               <div class="register"><a href="register">Registrar</a></div>
+               
+                  <div class="login"><a href="login">Ingresar</a></div>
+                  </div> 
+                  <ul class="container" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                </ul>
+                  
                 </div>
                 <div class="burger">
                   <i class="fa fa-bars" aria-hidden="true"></i>
@@ -69,22 +86,22 @@
       </div>
 
       <!-- Main Menu -->
-      <div class="main_menu">
+        <div class="main_menu">
         <div class="container">
             @yield('menu')
         </div>
-      </div>
+      </div> 
 
       <!-- Menu -->
 
-      <div class="menu">
+     <div class="menu">
         <div class="menu_register_login">
           <div class="container">
             <div class="row">
               <div class="col">
                 <div class="menu_register_login_content d-flex flex-row align-items-center justify-content-end">
-                  <div class="register"><a href="#">register</a></div>
-                  <div class="login"><a href="#">login</a></div>
+         <!--          <div class="register"><a href="#">register</a></div>
+                  <div class="login"><a href="#">login</a></div>  -->
                 </div>
               </div>
             </div>
@@ -93,7 +110,7 @@
       </div>
     </header>
   </div>
-</div>
+</div>                    
   <!-- Fin Home -->
   <!-- Contenedor -->
   <div class="intro">
