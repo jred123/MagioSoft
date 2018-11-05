@@ -8,7 +8,6 @@
       <tr>
           <th scope="col">Modalidad</th>
           <th scope="col">Descripcion</th>
-          <th scope="col">Inicial</th>
           <th></th>
           <th scope="col">
             <div class="text-center">
@@ -26,7 +25,6 @@
       <tr>
         <td>{{ $modalidad -> NOM}} </td>
         <td>{{ $modalidad -> DESC}} </td>
-        <td>{{ $modalidad -> INICIAL}} </td>
         <td>
             <div class="text-center">
               <h4>

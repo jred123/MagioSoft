@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Modalidades;
 use Illuminate\Http\Request;
@@ -16,7 +15,6 @@ class ModalidadController extends Controller
         $data = Modalidades::all();
         return view('modalidad.lista',['modalidades'=> $data ]);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +24,6 @@ class ModalidadController extends Controller
     {
         return view('modalidad.registrar');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -38,7 +35,6 @@ class ModalidadController extends Controller
         Modalidades::create($request->all());
         return redirect('modalidad');
     }
-
     /**
      * Display the specified resource.
      *
@@ -47,9 +43,8 @@ class ModalidadController extends Controller
      */
     public function show( $id)
     {
-       //
+        //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -63,7 +58,6 @@ class ModalidadController extends Controller
             'modalidad'=>$modalidad
         ]);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -76,7 +70,6 @@ class ModalidadController extends Controller
         Modalidades::findOrFail($id)->update($request->all());
         return redirect('modalidad');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -88,7 +81,6 @@ class ModalidadController extends Controller
         Modalidades::findOrFail()->delete($id);
         return redirect('modalidad');
     }
-
     public function ocultar($id)
     {
         Modalidades::findOrFail($id)->delete();
