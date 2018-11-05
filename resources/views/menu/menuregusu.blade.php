@@ -1,9 +1,9 @@
 @extends('layouts.principal')
 @section('titulo1')
-	@yield('titulo1login')
+	@yield('titulo1regusu')
 @endsection
 @section('titulo2')
-	@yield('titulo2login')
+	@yield('titulo2regusu')
 @endsection
 @section('menu')
 <div class="row">
@@ -20,7 +20,7 @@
                       </svg>
                     </a></li>
 
-                    <li class="active"><a href="#">INGRESAR
+                    <li class="desactive"><a href="#">INGRESAR
                       <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
                         <g>
@@ -28,7 +28,15 @@
                         </g>
                       </svg>
                     </a></li>
-
+                    
+                    <li class="active"><a href="#">REGISTRAR
+                          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
+                            <g>
+                              <polyline class="arrow_d" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="0.022,-0.178 4.5,4.331 9.091,-0.275   "/>
+                            </g>
+                          </svg>
+                        </a></li>
 
                     <!--<li  class=""><a href="/">Sugerir
                       <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

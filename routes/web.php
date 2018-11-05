@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*Route::get('ingresar', function(){
+	return view('ingresar'); 
+});*/
+
+
+Route::resource('usuario','UsuarioController');
+Route::get('usuario/ocultar/{id}', 'UsuarioController@ocultar');
+
+
+
 Route::get('profesional/ocultar/{id}', 'ProfesionalController@ocultar');
 Route::resource('profesional', 'ProfesionalController');
 Route::any('proyecto/ocultar/{id}', 'ProyectoController@ocultar');
@@ -42,9 +52,17 @@ Route::any('subarea/update/{id}', 'SubareaController@update')->name('subarea.upd
 Route::any('subarea/profesionales/{s}', 'SubareaController@indexProfesionales')->name('subarea.profesional');
 Route::any('subarea/eliminarProfesional/{idprofesional}/{idsubarea}', 'SubareaController@ocultarProfesional')->name('subarea.ocultarProfesional');
 
-Route::any('ingresar', function () {
+/*Route::any('ingresar', function () {
     return view('ingresar.index');
-});
+});*/
+
+
+Route::get('lista',function (){
+	    $users = \App\User::All();
+        return view('usuario.lista',compact('users'));
+    });
+    
+
 Route::any('subarea/registrar/{area}', 'SubareaController@recibe')->name('subarea.recibe');
 
 
@@ -61,3 +79,67 @@ Route::any('tribunal/retirar/{idprofesional}/{idproyecto}', 'TribunalController@
 ->name('tribunal.retirar');
 Route::any('tribunal/listaReasignar/{id}', 'TribunalController@listaReasignar')
 ->name('tribunal.listaReasignar');
+
+
+Route::group([
+    'middleware' => 'UserStandard',
+    'prefix' => 'userstandard',
+], function () {
+
+    Route::get('', 'UsuarioController@index');
+
+ 
+});
+
+Route::get('register', function () {
+    return view('auth.register');
+});
+
+Route::get('login', function () {
+    return view('auth.login');
+});
+
+Route::get('carrerastandard', function () {
+     $carreras = \App\Carrera::all();
+     return view('carrera.listastandard',compact('carreras'));
+});
+
+Route::get('areastandard', function () {
+     $areas = \App\Area::all();
+     return view('area.listastandard',compact('areas'));
+});
+
+Route::get('estudiantestandard', function () {
+     $estudiantes = \App\Estudiante::all();
+     return view('estudiante.listastandard',compact('estudiantes'));
+});
+Route::get('gestonstandard', function () {
+     $gestions = \App\Gestion::all();
+     return view('gestion.listastandard',compact('gestions'));
+});
+Route::get('modalidadstandard', function () {
+     $modalidades = \App\Modalidades::all();
+     return view('modalidad.listastandard',compact('modalidades'));
+});
+Route::get('profesionalstandard', function () {
+     $profesionales = \App\Profesional::all();
+     return view('profesional.listastandard',compact('profesionales'));
+});
+Route::get('proyectostandard', function () {
+     $proyectos = \App\Proyecto::all();
+     return view('proyecto.listastandard',compact('proyectos'));
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('standard', function () {
+   $users = \App\User::All();
+        return view('usuario.listastandard',compact('users'));
+});
+
