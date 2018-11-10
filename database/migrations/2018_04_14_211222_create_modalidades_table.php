@@ -15,8 +15,10 @@ class CreateModalidadesTable extends Migration
     {
         Schema::create('modalidades', function (Blueprint $table) {
             $table->increments('id');
-		        $table->string('NOM');
+		        $table->string('INICIAL');
+                $table->string('NOM');
             $table->text('DESC')->nullable()->default(null);
+            $table->integer('CANT');
             $table->softDeletes();
             $table->timestamps();
         });

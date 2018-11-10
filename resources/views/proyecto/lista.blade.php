@@ -7,6 +7,7 @@
     <thead class="thead-light">
       <tr>
         <th scope="col">Código</th>
+        <th scope="col">INICIAL</th>
         <th scope="col">Título</th>
         <th scope="col">Estudiante</th>
         <th scope="col">Tutor</th>
@@ -28,6 +29,7 @@
       <tr>
         <td>{{ $proyecto -> id}} </td>
         <td>{{ $proyecto -> TITULO_PERFIL}} </td>
+        $proyecto->modalidad->INICIAL}}
         <td>{{ $proyecto -> estudiante->pluck('full_name', 'id')->implode(' ')}} </td>
         <td>
           @foreach ($proyecto->estudiante as $e)
