@@ -88,8 +88,14 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,$request)
     {
+        $i=CANT;
+        for ($i=1; $i <250 ; $i++) { 
+            $i->CANT++;
+            $i->save();
+        }
+
         //
     }
 
