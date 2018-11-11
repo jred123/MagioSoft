@@ -1,6 +1,6 @@
 @extends('menu.menulistuserstandard')
-@section('titulo1list', 'LISTA')
-@section('titulo2list', 'DE ESTUDIANTES')
+@section('titulo1', 'LISTA')
+@section('titulo2', 'DE ESTUDIANTES')
 @section('contentlist')
 
 <div class="table-responsive table-striped">

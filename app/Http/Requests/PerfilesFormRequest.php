@@ -26,13 +26,14 @@ class PerfilesFormRequest extends FormRequest
     {
 
         return [
-            'titulo'=> 'required',
-            'objetivo_general'=> 'required',
-            'objetivos_especificos'=> 'required',
-            'descripcion'=> 'required',
+            'titulo'=> 'required_if:modalidad,==,1,2,3,4',
+            'objetivo_general'=> 'required_if:modalidad,==,1,2,3,4',
+            'objetivos_especificos'=> 'required_if:modalidad,==,1,2,3,4',
+            'descripcion'=> 'required_if:modalidad,==,1,2,3,4',
             'fecha_registro'=> 'required|date|before_or_equal:today',
             'gestion_registro'=> 'required|',
             'gestion_limite'=> 'required',
+            
         ];
     }
 }

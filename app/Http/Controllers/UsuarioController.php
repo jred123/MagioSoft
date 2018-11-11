@@ -59,8 +59,8 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        $users = User::findOrFail($id);
-        return view('usuario.edit',['users'=>$users]);
+       $user = User::find($id);
+       return view('usuario.edit')->with('user',$user);
     }
 
     /**
@@ -70,10 +70,14 @@ class UsuarioController extends Controller
      * @param  \App\titulo  $titulo
      * @return \Illuminate\Http\Response
      */
-    public function update($id )
+    public function update(Request $request, $id)
     {
-        User::findOrFail($id)->update($request->all());
-        return redirect('users');
+        
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        return redirect()-> route('usuario.index');
     }
 
     /**
@@ -99,4 +103,5 @@ class UsuarioController extends Controller
        return redirect()-> route('usuario.index');
   
     } 
+
 }

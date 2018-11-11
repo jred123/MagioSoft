@@ -14,9 +14,9 @@
           <th scope="col">
             <div class="text-primary">
               <h3>
-                <a href='{{ route('register')}}' data-toggle="tooltip" data-placement="right" title="Registar">
+                <!--<a href='{{ route('register')}}' data-toggle="tooltip" data-placement="right" title="Registar">
                   <i class="fas fa-plus-square btn-warning" aria-hidden="true" ></i>
-                </a>
+                </a>-->
               </h3>
             </div>
           </th>
@@ -29,8 +29,7 @@
 			<td>{{$user->name}}</td>
 			<td>{{$user->email}}</td>
       <td></td>
-      <td></td>
-<!--	<td>	
+  	<td>	
 		<div class="text-right">
               <h4>
                <a href='{{ route('usuario.edit',$user->id)}}' data-toggle="tooltip" data-placement="right" title="Editar">
@@ -38,7 +37,7 @@
                 </a>
               </h4>
             </div> 
-    </td>   -->
+    </td>   
         <td>
             <div class="text-left">
                 <h4>
@@ -49,7 +48,7 @@
                  @endif 
               </h4>
             </div> 
-	</td>
+	   </td>
       </tr>
       @endforeach
     </tbody>

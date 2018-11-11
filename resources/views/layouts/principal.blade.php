@@ -69,9 +69,13 @@
                                             {{ csrf_field() }}
                                         </form>
                   </div>
-                  </div> 
-                  
-                  
+                  @if (auth()->check())
+                  <div class="text-primary">
+                    <h4> Usuario : {{auth()->user()->name}} </h4>  
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                  </div>
+                  @endif
+                  </div>  
                 </div>
                 <div class="burger">
                   <i class="fa fa-bars" aria-hidden="true"></i>

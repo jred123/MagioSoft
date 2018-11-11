@@ -15,7 +15,7 @@
 
             </div>
         </div>
-    </div>
+    </div>   
 
     {!! Form::open(['route'=>'proyecto.store','method'=>'POST']) !!}
     <div class="form-group row">
@@ -60,10 +60,10 @@
     </div>
 
     <div class="form-group row">
-
       {!! Form::label('MODALIDAD','Modalidad',['class'=>'col-sm-2 col-form-label']) !!}
-      <div class="form-group col-sm-4">
+     <div class="form-group col-sm-4">
         {!! Form::select('modalidad',$modalidades, $modalidades ,['class'=>'form-control']) !!}
+
       </div>
 
       {!! Form::label('GESTION_LIMITE','Gestión Limite',['class'=>'col-sm-2 col-form-label']) !!}
@@ -71,9 +71,6 @@
         {!! Form::select( 'gestion_limite', $gestiones,  $gestiones, ['class'=>'form-control']) !!}
       </div>
     </div>
-
-
-
 
       <div class="form-group row">
 
@@ -106,4 +103,5 @@
     {!! Form::submit('registrar', ['class'=>'btn btn-warning btn_White']) !!}
     {!! Form::close() !!}
 </div>
+
 @endsection
