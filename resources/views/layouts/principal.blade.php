@@ -57,8 +57,8 @@
 
                 <div class="top_bar_content ml-auto">
                   <div class="register_login"> 
-                  <div class="register"><a href="register">Registrar</a></div>              
-                  <div class="login"><a href="login">Ingresar</a></div>
+                  <!--<div class="register"><a href="register">Registrar</a></div>  -->            
+                  <div class="register"><a href="login">Ingresar</a></div>
                   <div class="login">
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
