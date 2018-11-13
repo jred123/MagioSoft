@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('ingresar', function(){
+	return view('ingresar'); 
+});
+
 Route::get('profesional/ocultar/{id}', 'ProfesionalController@ocultar');
 Route::resource('profesional', 'ProfesionalController');
 Route::any('proyecto/ocultar/{id}', 'ProyectoController@ocultar');
@@ -59,3 +63,4 @@ Route::any('tribunal/retirar/{idprofesional}/{idproyecto}', 'TribunalController@
 ->name('tribunal.retirar');
 Route::any('tribunal/listaReasignar/{id}', 'TribunalController@listaReasignar')
 ->name('tribunal.listaReasignar');
+

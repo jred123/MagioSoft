@@ -16,8 +16,8 @@
                         </g>
                       </svg>
                     </a></li>
-                    <li class="hassubs">
-                      <a href="#">Registrar
+         <!--       <li class="hassubs">
+                    <a href="#">Registrar
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
                           <g>
@@ -151,8 +151,8 @@
                           </svg>
                         </a></li>
                       </ul>
-                    </li>
-                    <!--<li  class=""><a href="/">Sugerir
+                    </li>-->
+<!--anteriormente comentdo--> <!--<<li  class=""><a href="/">Sugerir
                       <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="9px" height="5px" viewBox="0 0 9 5" enable-background="new 0 0 9 5" xml:space="preserve">
                         <g>

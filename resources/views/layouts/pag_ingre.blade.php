@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-  <title>Perfil</title>
+  <title>FORMULARIO</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Invest project">
@@ -54,12 +54,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="top_bar_content ml-auto">
-                  <div class="register_login">
-                  <!--<div class="register"><a href="#">Registrar</a></div>-->
-                    <div class="login"><a href="ingresar">Ingresar</a></div>
-                  </div>
-                </div>
+             
                 <div class="burger">
                   <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
