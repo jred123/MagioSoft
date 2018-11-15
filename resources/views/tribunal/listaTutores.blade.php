@@ -71,7 +71,7 @@
         </table>
     </div>
         <div class="form-group ">
-            <a href="{{ route('proyecto.index') }}" class="btn btn-danger">Cancel</a>
+            <a href="{{ route('proyecto.index') }}" class="btn btn-warning">Cancel</a>
         </div>
         {!! Form::close() !!}
     </div>
