@@ -16,7 +16,7 @@ class UsuarioController extends Controller
     {
             $users = User::all();
             $users = User::paginate(15);
-            return view('usuario.lista',['users'=> $users ]);
+            return view('usuario.lista',['users'=> $users ]);          
     }
 
     /**

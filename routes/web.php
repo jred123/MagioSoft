@@ -86,7 +86,7 @@ Route::group([
     'prefix' => 'userstandard',
 ], function () {
 
-    Route::get('/usuario', 'UsuarioController@index');
+    Route::get('', 'UsuarioController@index');
 
  
 });
@@ -108,6 +108,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('standard', function () {
-    return view('menu.menulistuserstandard');
+   $users = \App\User::All();
+        return view('usuario.listastandard',compact('users'));
 });
 

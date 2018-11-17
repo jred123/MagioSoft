@@ -47,12 +47,7 @@ class ModalidadController extends Controller
      */
     public function show( $id)
     {
-        $variable = Modalidades::find($id);
-        if (CANT::has($id)==false) {
-            CANT::add($id,'contador', 100 );
-            $variable->total_cant++;
-            $variable->save();
-        }
+       //
     }
 
     /**

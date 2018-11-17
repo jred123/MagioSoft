@@ -90,7 +90,7 @@ class ProyectoController extends Controller
      */
     public function show($id,$request)
     {
-        //
+        
     }
 
     /**
