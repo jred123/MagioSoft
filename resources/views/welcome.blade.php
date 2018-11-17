@@ -1,4 +1,3 @@
-
 @extends('layouts.principal')
 @section('titulo1', 'Universidad Mayor De San Simon')
 @section('titulo2', 'Departamento de Informática y Sistemas.')

@@ -90,12 +90,6 @@ class ProyectoController extends Controller
      */
     public function show($id,$request)
     {
-        $i=CANT;
-        for ($i=1; $i <250 ; $i++) { 
-            $i->CANT++;
-            $i->save();
-        }
-
         //
     }
 
