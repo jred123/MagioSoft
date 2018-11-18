@@ -1,10 +1,8 @@
-@extends('menu.menuregusu')
+@extends('menu.menureg')
+@section('titulo1reg', 'REGISTRO')
+@section('titulo2reg', 'DE USUARIOS')
+@section('contentreg')
 
-@section('titulo1','Registro')
-@section('titulo2','Sistema')
-@section('contentregister')
-
-@section('content')
 <h1 class="form-heading">INGRESO</h1>
 <div class="login-form">
 <div class="main-div">

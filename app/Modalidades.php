@@ -11,6 +11,8 @@ class Modalidades extends Model
     Use SoftDeletes;
 
     protected $fillable=[
+        'INICIAL',
+        'number_format(number)',
         'NOM',
         'DESC'
     ];

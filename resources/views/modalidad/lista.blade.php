@@ -6,6 +6,7 @@
 <table class="table" id="table_id">
     <thead class="thead-light">
       <tr>
+          <th scope="col">Inicial</th>
           <th scope="col">Modalidad</th>
           <th scope="col">Descripcion</th>
           <th></th>
@@ -23,6 +24,7 @@
     <tbody>
         @foreach($modalidades as $modalidad)
       <tr>
+        <td>{{ $modalidad -> INICIAL}} </td>
         <td>{{ $modalidad -> NOM}} </td>
         <td>{{ $modalidad -> DESC}} </td>
         <td>
