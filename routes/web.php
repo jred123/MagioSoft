@@ -99,6 +99,37 @@ Route::get('login', function () {
     return view('auth.login');
 });
 
+Route::get('carrerastandard', function () {
+     $carreras = \App\Carrera::all();
+     return view('carrera.listastandard',compact('carreras'));
+});
+
+Route::get('areastandard', function () {
+     $areas = \App\Area::all();
+     return view('area.listastandard',compact('areas'));
+});
+
+Route::get('estudiantestandard', function () {
+     $estudiantes = \App\Estudiante::all();
+     return view('estudiante.listastandard',compact('estudiantes'));
+});
+Route::get('gestonstandard', function () {
+     $gestions = \App\Gestion::all();
+     return view('gestion.listastandard',compact('gestions'));
+});
+Route::get('modalidadstandard', function () {
+     $modalidades = \App\Modalidades::all();
+     return view('modalidad.listastandard',compact('modalidades'));
+});
+Route::get('profesionalstandard', function () {
+     $profesionales = \App\Profesional::all();
+     return view('profesional.listastandard',compact('profesionales'));
+});
+Route::get('proyectostandard', function () {
+     $proyectos = \App\Proyecto::all();
+     return view('proyecto.listastandard',compact('proyectos'));
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
