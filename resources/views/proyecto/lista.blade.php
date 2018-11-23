@@ -49,12 +49,10 @@
           {{ $proyecto -> id }} </td>
         <td> 
           {{ $proyecto -> modalidad -> INICIAL}}
-          @if($proyecto -> modalidad -> id == 1 ) 
-          {{$proyecto -> modalidad -> CANT+1}}
-          @endif
-
          </td>
-        <td>{{ $proyecto -> TITULO_PERFIL}} </td>
+        <td>
+          {{ $proyecto -> TITULO_PERFIL}} 
+        </td>
         <td>{{ $proyecto -> estudiante->pluck('full_name', 'id')->implode(' ')}} </td>
         <td>
           @foreach ($proyecto->estudiante as $e)
