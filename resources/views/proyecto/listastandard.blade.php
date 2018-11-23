@@ -1,12 +1,13 @@
 @extends('menu.menulistuserstandard')
-@section('titulo1list', 'LISTA')
-@section('titulo2list', 'DE PERFILES')
+@section('titulo1', 'LISTA')
+@section('titulo2', 'DE PERFILES')
 @section('contentlist')
 <div class="table-responsive">
   <table class="table" id="table_id">
     <thead class="thead-light">
       <tr>
         <th scope="col">Código</th>
+        <th></th>
         <th scope="col">Título</th>
         <th scope="col">Estudiante</th>
         <th scope="col">Tutor</th>
@@ -18,9 +19,9 @@
       @foreach($proyectos as $proyecto)
       @if ($proyecto->CICLO == 'en progreso')
       <tr>
+        <td>{{$proyecto -> id}}</td>
         <td> 
           {{ $proyecto -> modalidad -> INICIAL}}
-          {{ $proyecto -> id}}
          </td>
         <td>{{ $proyecto -> TITULO_PERFIL}} </td>
         <td>{{ $proyecto -> estudiante->pluck('full_name', 'id')->implode(' ')}} </td>

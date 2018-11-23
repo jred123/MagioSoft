@@ -22,8 +22,8 @@ Route::get('/', function () {
 
 Route::resource('usuario','UsuarioController');
 Route::get('usuario/ocultar/{id}', 'UsuarioController@ocultar');
-
-
+Route::any('usuario/edit/{id}', 'UsuarioController@edit')->name('usuario.edit');;
+Route::any('usuario/update/{id}', 'UsuarioController@update')->name('usuario.update');;
 
 Route::get('profesional/ocultar/{id}', 'ProfesionalController@ocultar');
 Route::resource('profesional', 'ProfesionalController');

@@ -13,7 +13,7 @@
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
-                        </div>
+                        </div>            
                     @endif
                     USUARIO ADMINISTRADOR!
                 </div>

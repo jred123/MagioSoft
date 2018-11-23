@@ -1,6 +1,6 @@
 @extends('menu.menulistuserstandard')
-@section('titulo1list', 'LISTA')
-@section('titulo2list', 'DE PROFESIONALES')
+@section('titulo1', 'LISTA')
+@section('titulo2', 'DE PROFESIONALES')
 @section('contentlist')
 
 {!! Form::open((array('url'=>'profesional','method'=>'GET','class' => 'navbar-form navbar-left pull-right'))) !!}

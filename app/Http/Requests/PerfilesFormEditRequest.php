@@ -28,14 +28,4 @@ class PerfilesFormEditRequest extends FormRequest
         ];
     }
 
-    public function contador($c)
-    {
-        $contador = 1;
-        $limite = 100;
-        while ($contador <= $limite) {
-            echo $contador . '<br  />';
-            return $contador;
-        }
-
-
 }
