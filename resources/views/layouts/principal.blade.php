@@ -56,8 +56,9 @@
                 </div>
 
                 <div class="top_bar_content ml-auto">
-                  <div class="register_login">               
-                  <div class="register"><a href="login">Ingresar</a></div>
+                  <div class="register_login"> 
+                  <div class="register"><a href="register">Registrar</a></div>              
+                  <div class="login"><a href="login">Ingresar</a></div>
                   <div class="login">
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -72,7 +73,7 @@
                   @if (auth()->check())
                   <div class="text-primary">
                     <h4> Usuario : {{auth()->user()->name}} </h4>  
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online </a>
                   </div>
                   @endif
                   </div>  
